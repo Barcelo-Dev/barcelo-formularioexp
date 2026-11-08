@@ -10,6 +10,7 @@ const emailCopy = {
     greeting: (name?: string | null) => (name ? `Hola ${name},` : "Hola,"),
     body: "Gracias por registrarte. Este es tu cupón de bienvenida para que lo disfrutes durante tu estancia en Barceló Guatemala City. Solo muestra tu código para canjearlo.",
     codeLabel: "Tu código",
+    validity: "Válido por 1 semana a partir de hoy.",
     note: "Guarda este código. Te enviaremos también futuras ofertas exclusivas.",
     footer1: "Barceló Guatemala City · Ciudad de Guatemala",
     footer2:
@@ -23,6 +24,7 @@ const emailCopy = {
     greeting: (name?: string | null) => (name ? `Hi ${name},` : "Hi,"),
     body: "Thanks for signing up. This is your welcome coupon to enjoy during your stay at Barceló Guatemala City. Just show your code to redeem it.",
     codeLabel: "Your code",
+    validity: "Valid for 1 week from today.",
     note: "Save this code. We'll also send you future exclusive offers.",
     footer1: "Barceló Guatemala City · Guatemala City",
     footer2:
@@ -68,7 +70,8 @@ export function couponEmailHtml({
             </td></tr>
             <tr><td style="padding:22px 24px;text-align:center;background-color:#f6f4ef;border-top:2px dashed #c9c5bb;">
               <p style="margin:0 0 6px 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#8e9091;font-weight:bold;">${c.codeLabel}</p>
-              <p style="margin:0;font-family:'Courier New',Courier,monospace;font-size:32px;font-weight:bold;letter-spacing:3px;color:#14323d;">${couponCode}</p>
+              <p style="margin:0 0 10px 0;font-family:'Courier New',Courier,monospace;font-size:32px;font-weight:bold;letter-spacing:3px;color:#14323d;">${couponCode}</p>
+              <p style="margin:0;font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#c99a3f;">${c.validity}</p>
             </td></tr>
           </table>
         </td></tr>

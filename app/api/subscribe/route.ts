@@ -123,7 +123,7 @@ export async function POST(request: Request) {
       consent_at: nowIso,
       confirmed: true,
       confirmed_at: nowIso,
-      source: "web_form",
+      source: "expedia",
     })
     .select("coupon_code")
     .single();
